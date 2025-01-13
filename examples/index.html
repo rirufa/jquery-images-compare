@@ -16,17 +16,18 @@
     <div class="js-img-compare">
         <div style="display: none;">
             <span class="images-compare-label">Before</span>
-            <img src="assets/img/01-celine-skowron-before.jpg" alt="Before">
+            <img src="assets/img/01-celine-skowron-before.jpg" id="before_img" alt="Before">
         </div>
         <div>
             <span class="images-compare-label">After</span>
-            <img src="assets/img/01-celine-skowron-after.jpg" alt="After">
+            <img src="assets/img/01-celine-skowron-after.jpg" id="after_img" alt="After">
         </div>
     </div>
     <div>
         <button class="btn js-front-btn">Show front image</button>
         <button class="btn js-back-btn">Show back image</button>
         <button class="btn js-toggle-btn">Toggle</button>
+        <button class="btn js-change-img-btn">Change</button>
     </div>
 
     <footer>
@@ -81,6 +82,10 @@
             } else {
                 imagesCompare.setValue(0, true);
             }
+        });
+        $(".js-change-img-btn").click(function(){
+           $("#before_img").attr('src','assets/img/02-celine-skowron-before.jpg');
+           $("#after_img").attr('src','assets/img/02-celine-skowron-after.jpg');
         });
     });
 </script>

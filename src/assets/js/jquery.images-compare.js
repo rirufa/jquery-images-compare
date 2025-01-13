@@ -180,8 +180,12 @@
             element.addClass('images-compare-container');
             element.css('display', 'inline-block');
 
-            frontElement = element.find('> *:nth-child(1)');
-            backElement = element.find('> *:nth-child(2)');
+            frontElement = element.find('> .images-compare-before');
+            if(frontElement.length == 0)
+                frontElement = element.find('> *:nth-child(1)');
+            backElement = element.find('> .images-compare-after');
+            if(backElement.length == 0)
+                backElement = element.find('> *:nth-child(2)');
 
             frontElement.addClass("images-compare-before");
             frontElement.css('display', 'block');
